@@ -1,0 +1,97 @@
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+form {
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100px;
+}
+
+#enviar {
+    background: #c00303;
+    color: #fff;
+    padding: 20px;
+    height: -1px;
+    width: 134px;
+}
+
+#boton {
+    background: #c00303;
+    color: #fff;
+    padding: 20px;
+    height: -1px;
+    width: 134px;
+}
+
+#enviar:hover {
+    cursor: pointer;
+}
+
+@media(max-width:480px) {
+    form {
+        width: 100%;
+    }
+}
+
+label {
+    color: #fff;
+}
+
+#AUXILIAR {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+#horario {
+    color: #050505;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+#horario1 {
+    color: #050505;
+    background: rgb(255, 255, 255);
+}
+
+input:valid {
+    content: '✓';
+    border: 1px solid green;
+}

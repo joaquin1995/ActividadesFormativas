@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animation.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="row">
+            <div class="col s3">
+                <ul id="slide-out" class="sidenav sidenav-fixed">
+                    <li>
+                        <div class="user-view">
+                            <!-- <div class="background">
+                            <img src="https://lorempixel.com/580/250/nature/1" alt="">
+                        </div> -->
+                            <a href="">
+                                <!-- <img src="./img/descarga.png" alt="" class="circle"> -->
+                                <span class="name white-text center">ACTIVIDADES</span>
+                            </a>
+                            <a href="">
+                                <span class="name white-text center">JOAQUIN CORTEZ</span>
+                            </a>
+                            <a href="">
+                                <span class="email white-text center">joakincortez8@gmail.com</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a href="index2.html" id="opcion">
+                            <i class="material-icons">assignment_ind</i> Actividades
+                        </a>
+                    </li>
+                    <!-- <li>
+                    <div class="divider"></div>
+                </li> -->
+                    <li>
+                        <a href="reportes.html" id="opcion">
+                            <i class="material-icons">bar_chart</i> Reportes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" id="opcion">
+
+                            <i class="material-icons">settings_applications</i> Configuracion
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="col s9 ">
+                <br>
+                <!-- encabezado -->
+                <div class="row">
+                    <div class="col s1 right">
+                        <!-- para la imagen -->
+                    </div>
+                    <div class="col s1 right">
+                        <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Salir">
+                        power_settings_new
+                    </i>
+                    </div>
+                    <div class="col s1 right">
+                        <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Buscar">
+                        search
+                    </i>
+                    </div>
+
+                    <div class="col s1 right">
+                        <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Notificaciones">
+                        notification_important
+                    </i>
+                    </div>
+                    <div class="col s5 center white-text">
+                        <h6>ACTIVIDADES INFORMATIVAS</h6>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                <br>
+                <br>
+                <!-- cuerpo -->
+                <div class="row">
+                    <form class="col s12">
+
+
+                        <div class="row card-panel">
+                            <div class="input-field col s6">
+                                <select>
+                                <option value="" disabled selected>Semestre</option>
+                                <option value="1">Semestre 1</option>
+                                <option value="2">Semestre 2</option>
+                            </select>
+                                <label>Semestre</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <select>
+                                <option value="" disabled selected>Modulo</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+
+                            </select>
+                                <label>Modulo</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input type="text" class="datepicker">
+                                <label>Fecha</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input type="text" id="carrera" class="autocomplete">
+                                <label for="carrea">Carrera</label>
+                            </div>
+
+
+                            <div class="input-field col s6">
+                                <input type="text" id="materia" class="autocomplete1">
+                                <label for="materia">Asignatura</label>
+
+                            </div>
+                            <div class="input-field col s6">
+
+                                <select>
+                                <option value="" disabled selected>Tipo de Actividad</option>
+                                <option value="0">Actividad 0</option>
+                                <option value="1">Actividad 1</option>
+                                <option value="2">Actividad 2</option>
+                                <option value="3">Actividad 3</option>
+                                <option value="4">Actividad 4</option>
+                                <option value="5">Actividad 5</option>
+
+                            </select>
+                                <label>Actividad</label>
+
+                            </div>
+
+                            <div class="input-field col s6">
+
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Descripcion de la Actividad</label>
+
+                            </div>
+
+
+                            <div class="input-field col s6">
+
+                                <form action="#">
+                                    <div class="file-field input-field">
+                                        <div class="btn">
+                                            <span>File</span>
+                                            <input type="file">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <div class="input-field col s12 center">
+                                <button class="btn grey darken-4" type="submit">Enviar</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/init.js"></script>
+</body>
+
+</html>

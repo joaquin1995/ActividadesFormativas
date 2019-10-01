@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Actividades</title>
+
+    <!---------External-------->
+    <link rel="stylesheet" href="./external/bootstrap.css">
+    <link rel="stylesheet" href="./external/css/gijgo.min.css">
+    <link rel="stylesheet" href="./external/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./external/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./external/css/bootstrap-reboot.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!----------Css------------->
+    <link rel="stylesheet" href="./css/actividades.css">
+    <link rel="stylesheet" href="./css/animation.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <center>
+            <form id="msform">
+                <h2>ACTIVIDADES</h2>
+                <fieldset>
+                    <label for="AUXILIAR" title="AUXILIAR"> SEMESTRE</label>
+                    <select id="horario" name="auxiliares" placeholder="selecione" required>
+                        <option id="" value="">Seleccione un Semestre</option>
+                        <option id="">1</option>
+                        <option id="">2</option>
+                        <option id="">3</option>
+                        <option id="">4</option>
+                        <option id="">5</option>
+                        </select>
+
+                    <label for="MODULO" title="">MÓDULO</label>
+                    <input type="" placeholder="Módulo" id="" autocomplete="off" required>
+
+                    <label for="FECHA" title="dia de reservas">FECHA</label>
+                    <input type="date" placeholder="--/--/--" name="dia de reservas" id="" autocomplete="off" required>
+
+                    <label for="AUXILIAR" title="AUXILIAR">TIPO DE ACTIVIDAD</label>
+                    <select id="horario" name="auxiliares" placeholder="selecione" required>
+                            <option id="" value="">Actividades</option> 
+                            <option id="">Visitas Técnicas</option>
+                            <option id="">Ferias</option>
+                            <option id="">Seminarios</option>
+                            <option id="">Talleres</option>
+                            <option id="">Etc</option>
+                            </select>
+
+                    <label for="DESCRIP" title="">DESCRIPCIÓN</label>
+                    <input type="" placeholder="Descripción de la actividad" id="" autocomplete="off" required>
+
+                    <input type="button" name="next" class="next action-button" id="boton" value="Siguiente" />
+                </fieldset>
+
+                <fieldset>
+                    <label for="ASIGN" title="">ASIGNATURA</label>
+                    <input type="" placeholder="Asignatura" id="" autocomplete="off" required>
+
+                    <label for="CARRERA" title="">CARRERA</label>
+                    <input type="" placeholder="Carrera" id="" autocomplete="off" required>
+
+                    <label for="DOCENTE" title="">DOCENTE</label>
+                    <input type="" placeholder="Docente" id="" autocomplete="off" required>
+
+                    <label for="ADJUNTAR" title="">ADJUNTAR</label>
+                    <input type="" placeholder="Adjuntar un archivo" id="" autocomplete="off" multiple>
+
+
+                    <input type="button" name="previous" id="boton" class="previous action-button" value="Anterior" />
+                    <input type="button" value="Enviar" id="enviar">
+                    <input type="button" name="" value="Reporte" id="boton" />
+                </fieldset>
+            </form>
+        </center>
+    </div>
+    <!---------JavaScript---------->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+    <script src="../external/js/gijgo.min.js"></script>
+    <script src="../external/js/sweetalert2@8.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</htmll

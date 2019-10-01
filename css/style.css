@@ -1,0 +1,41 @@
+header,
+main,
+footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+.sidenav {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.material-icons {
+    color: #fff;
+}
+.material-icon {
+    color: #fff;
+}
+
+.card-panel {
+    background-color: rgb(161, 160, 159, 0.5);
+}
+
+/* .col {
+    color: white;
+} */
+
+#opcion {
+    color: white;
+}
+
+#icon {
+    color: #fff;
+}
