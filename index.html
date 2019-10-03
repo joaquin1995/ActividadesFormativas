@@ -81,19 +81,19 @@
                     </div>
                     <div class="col s1 right">
                         <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Salir">
-                        power_settings_new
-                    </i>
+                            power_settings_new
+                        </i>
                     </div>
                     <div class="col s1 right">
                         <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Buscar">
-                        search
-                    </i>
+                            search
+                        </i>
                     </div>
 
                     <div class="col s1 right">
                         <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Notificaciones">
-                        notification_important
-                    </i>
+                            notification_important
+                        </i>
                     </div>
                     <div class="col s5 center white-text">
                         <h6>ACTIVIDADES INFORMATIVAS</h6>
@@ -105,29 +105,28 @@
                 <br>
                 <!-- cuerpo -->
                 <div class="row">
-                    <form class="col s12">
-
+                    <form class="col s12" autocomplete="off">
 
                         <div class="row card-panel">
                             <div class="input-field col s6">
                                 <select>
-                                <option value="" disabled selected>Semestre</option>
-                                <option value="1">Semestre 1</option>
-                                <option value="2">Semestre 2</option>
-                            </select>
+                                    <option value="" disabled selected>Semestre</option>
+                                    <option value="1">Semestre 1</option>
+                                    <option value="2">Semestre 2</option>
+                                </select>
                                 <label>Semestre</label>
                             </div>
                             <div class="input-field col s6">
                                 <select>
-                                <option value="" disabled selected>Modulo</option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                                    <option value="" disabled selected>Modulo</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
 
-                            </select>
+                                </select>
                                 <label>Modulo</label>
                             </div>
 
@@ -149,16 +148,16 @@
                             </div>
                             <div class="input-field col s6">
 
-                                <select>
-                                <option value="" disabled selected>Tipo de Actividad</option>
-                                <option value="0">Actividad 0</option>
-                                <option value="1">Actividad 1</option>
-                                <option value="2">Actividad 2</option>
-                                <option value="3">Actividad 3</option>
-                                <option value="4">Actividad 4</option>
-                                <option value="5">Actividad 5</option>
+                                <select id="actividad">
+                                    <!-- <option value="" disabled selected>Tipo de Actividad</option> -->
+                                    <!-- <option value="0">Actividad 0</option>
+                                    <option value="1">Actividad 1</option>
+                                    <option value="2">Actividad 2</option>
+                                    <option value="3">Actividad 3</option>
+                                    <option value="4">Actividad 4</option>
+                                    <option value="5">Actividad 5</option> -->
 
-                            </select>
+                                </select>
                                 <label>Actividad</label>
 
                             </div>
@@ -172,19 +171,7 @@
 
 
                             <div class="input-field col s6">
-
-                                <form action="#">
-                                    <div class="file-field input-field">
-                                        <div class="btn">
-                                            <span>File</span>
-                                            <input type="file">
-                                        </div>
-                                        <div class="file-path-wrapper">
-                                            <input class="file-path validate" type="text">
-                                        </div>
-                                    </div>
-                                </form>
-
+                                <button class="btn modal-trigger grey darken-4" data-target="idModal">Archivos</button>
                             </div>
 
                             <div class="input-field col s12 center">
@@ -201,9 +188,58 @@
             </div>
         </div>
     </div>
+
+    <!-- modal -->
+    <div id="idModal" class="modal">
+
+        <div class="modal-content">
+
+            <h4 class="modal-title">Archivos</h4>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione explicabo rerum minima saepe
+                    perferendis maiores, quo modi a, porro deserunt quibusdam consequatur alias sed quidem eius eligendi
+                    eveniet nesciunt est?</p> -->
+
+            <form action="#">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <a href="" class="btn modal-close">Cerrar</a>
+        </div>
+
+    </div>
+    <!-- aqui termina -->
+
+
     <!-- Compiled and minified JavaScript -->
+    <script src="./js/conexion/conexion.js"></script>
+    <script src="./js/mod1/interfaceA.js"></script>
+    <script src="./js/mod1/appA.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/init.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- <form action="#">
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>File</span>
+                <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+    </form> -->
