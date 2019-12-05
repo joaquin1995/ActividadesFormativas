@@ -1,0 +1,99 @@
+.img-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-right: 20px;
+    animation: latir infinite 1s linear;
+}
+
+.row .nadvar {
+    margin-bottom: 0;
+    margin-top: -10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.row .nadvar .flex-nadvar {
+    display: flex;
+    align-items: center;
+}
+
+.iconos-nadvar {
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sidenav {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.formulario {
+    padding-right: 50px !important;
+}
+
+.texto-sidevar {
+    color: white !important;
+}
+
+.active {
+    background-color: rgba(255, 255, 255,.5);
+}
+
+a {
+    transition: 300ms all !important;
+}
+
+a:hover {
+    background-color:rgba(255, 255, 255,.5) !important;
+}
+
+.circle {
+    margin: 0 auto;
+}
+
+.darken-4 {
+    transition: 300ms all !important;
+}
+
+.darken-4:hover {
+    background-color: red !important;
+}
+
+@keyframes latir {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.02, 1.02);
+    }
+
+    55%{
+        transform: scale(0.95, 0.95);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.card {
+    left: 5px;
+    top: 5px;
+    transition: all .5s ;
+}
+
+.card:hover {
+    left: 0px;
+    top: 0px;
+    box-shadow: none;
+}
+
+
+.center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
