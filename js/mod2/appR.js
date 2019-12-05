@@ -16,6 +16,7 @@ const semestre = document.querySelector('#semestre');
 const anio = document.querySelector('#anio');
 const estado = document.querySelector('#estado');
 const actividad = document.querySelector('#actividad');
+const excel = document.querySelector('#excel');
 let arrayCarreras = [],
      carrera = '%%';
 
@@ -93,6 +94,10 @@ function fila(e) {
      ioR.nombresFiles(filas);
      console.log(filas,des,estado);
      // ioA.obtenerNoticiaId(filas);
- 
  }
+
+ excel.addEventListener('click',()=> {
+      console.log('si');
+      exportTableToExcel('tblDatos','prueba');
+ })
 
