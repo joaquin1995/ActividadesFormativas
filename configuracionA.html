@@ -92,7 +92,7 @@
                     </i>
                 </div>
                 <div class="col s5 center black-text">
-                    <h6>CONFIGURACION</h6>
+                    <h6>CONFIGURACION ACTIVIDAES</h6>
                 </div>
             </div>
 
@@ -101,36 +101,71 @@
             <br>
             <!-- cuerpo -->
             <div class="row">
-                <!-- primer cards -->
-                <div class="col s4" onclick="location.href='configuracionP.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/configuracion.jpg" alt="">
-                            <span class="card-title black-text">Configuracion Personas</span>
-                        </div>
+
+                <div class="col s6">
+                    <div class="input-field col s6">
+                        <a href="#idModal" class="btn-floating modal-trigger" id="agregar"><i
+                                class="material-icons">add</i></a>
+                        <a href="#idModal" class="btn-floating modal-trigger" id="agregar"><i
+                                class="material-icons">edit</i></a>
+                        <!-- <label for="">AGREGAR</label> -->
                     </div>
+
                 </div>
-                <!-- aqui termina -->
-                <!-- sgundo cards -->
-                <div class="col s4" onclick="location.href='configuracionA.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/configuracion.jpg" alt="">
-                            <span class="card-title black-text">Configuracion Actividades</span>
-                        </div>
-                    </div>
+                <div class="col s12">
+                    <table id="tblDatos">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombres</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbody">
+                            <!-- <tr>
+                                <td colspan="8" style="text-align: center;">
+                                    <h6>No Hay Datos</h6>
+                                </td>
+                            </tr> -->
+                            <tr>
+                                <td>1</td>
+                                <td>VISITAS TECNICAS</td>
+                                <td>ACTIVO</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>FERIAS</td>
+                                <td>ACTIVO</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>SEMINARIOS</td>
+                                <td>ACTIVO</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>TALLERES INTERNOS</td>
+                                <td>ACTIVO</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>MISIONES ACADEMICAS</td>
+                                <td>ACTIVO</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>PROYECTO FINALES</td>
+                                <td>ACTIVO</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>OTROS</td>
+                                <td>ACTIVO</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <!-- aqui termina -->
-                <!-- tercer cards -->
-                <!-- <div class="col s4" onclick="location.href='reporteChartFac.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/char.png" alt="">
-                            <span class="card-title black-text">Reporte Grafio Por Facultad</span>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- aqui termina -->
 
             </div>
         </div>
@@ -143,38 +178,10 @@
                     <form class="col s12" id="form">
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="nombres" type="text" class="validate">
-                                <label for="nombres">Nombres</label>
+                                <input id="nombre" type="text" class="validate">
+                                <label for="nombre">Nombre</label>
                             </div>
-                            <div class="input-field col s6">
-                                <input id="apaterno" type="text" class="validate">
-                                <label for="apaterno">A.paterno</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="amaterno" type="text" class="validate">
-                                <label for="amaterno">A.materno</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="email" type="text" class="validate">
-                                <label for="email">Email</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <!-- <input id="limitacion" type="text" class="validate"> -->
-                                <p class="range-field">
-                                    <label for="limitacion">Limitacion</label>
-                                    <input type="range" id="limitacion" min="1" max="100" value="2" />
-                                </p>
-                            </div>
-                            <div class="input-field col s6">
-                                <select id='rolModal'>
-                                    <option value="" disabled selected>Seleccione el rol</option>
 
-                                </select>
-                            </div>
                         </div>
                         <button class="btn center" type="submit">Enviar</button>
                     </form>
@@ -190,8 +197,7 @@
 
         <!-- Compiled and minified JavaScript -->
         <script src="./js/conexion/conexion.js"></script>
-        <script src="./js/mod5/interface.js"></script>
-        <script src="./js/mod5/app.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="./js/init.js"></script>
         <!-- <script>

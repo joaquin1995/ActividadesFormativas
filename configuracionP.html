@@ -92,7 +92,7 @@
                     </i>
                 </div>
                 <div class="col s5 center black-text">
-                    <h6>CONFIGURACION</h6>
+                    <h6>CONFIGURACION PERSONAS</h6>
                 </div>
             </div>
 
@@ -101,36 +101,82 @@
             <br>
             <!-- cuerpo -->
             <div class="row">
-                <!-- primer cards -->
-                <div class="col s4" onclick="location.href='configuracionP.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/configuracion.jpg" alt="">
-                            <span class="card-title black-text">Configuracion Personas</span>
-                        </div>
+
+                <div class="col s6">
+                    <div class="input-field col s6">
+                        <a href="#idModal" class="btn-floating modal-trigger" id="agregar"><i
+                                class="material-icons">add</i></a>
+                        <a href="#idModal" class="btn-floating modal-trigger" id="agregar"><i
+                                class="material-icons">edit</i></a>
+                        <!-- <label for="">AGREGAR</label> -->
+                    </div>
+                    <div class="input-field col s6">
+                        <select id='rol'>
+                            <option value="" disabled selected>Seleccione el rol</option>
+                            <!-- <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option> -->
+                        </select>
+                        <label>Roles</label>
                     </div>
                 </div>
-                <!-- aqui termina -->
-                <!-- sgundo cards -->
-                <div class="col s4" onclick="location.href='configuracionA.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/configuracion.jpg" alt="">
-                            <span class="card-title black-text">Configuracion Actividades</span>
-                        </div>
-                    </div>
+                <div class="col s12">
+                    <table id="tblDatos">
+                        <thead>
+                            <tr>
+                                <th style="display:none;">id</th>
+                                <th>Nombres</th>
+                                <th>A.paterno</th>
+                                <th>A.materno</th>
+                                <th>Email</th>
+                                <th>Limitacion(MB)</th>
+                                <th>Usuario</th>
+                                <th>Password</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbody">
+                            <tr>
+                                <td colspan="8" style="text-align: center;">
+                                    <h6>No Hay Datos</h6>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Jellybean</td>
+                                <td>$3.76</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Lollipop</td>
+                                <td>$7.00</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
                 </div>
-                <!-- aqui termina -->
-                <!-- tercer cards -->
-                <!-- <div class="col s4" onclick="location.href='reporteChartFac.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/char.png" alt="">
-                            <span class="card-title black-text">Reporte Grafio Por Facultad</span>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- aqui termina -->
 
             </div>
         </div>
@@ -166,7 +212,7 @@
                                 <!-- <input id="limitacion" type="text" class="validate"> -->
                                 <p class="range-field">
                                     <label for="limitacion">Limitacion</label>
-                                    <input type="range" id="limitacion" min="1" max="100" value="2" />
+                                    <input type="range" id="limitacion" min="1" max="100" value="2"/>
                                 </p>
                             </div>
                             <div class="input-field col s6">
