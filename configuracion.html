@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="./css/tabla.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col s3">
+            <ul id="slide-out" class="sidenav sidenav-fixed">
+                <li>
+                    <div class="user-view">
+                        <!-- <div class="background">
+                                    <img src="https://lorempixel.com/580/250/nature/1" alt="">
+                                </div> -->
+                        <a href="">
+                            <!-- <img src="./img/descarga.png" alt="" class="circle"> -->
+                            <span class="name black-text center">ACTIVIDADES</span>
+                        </a>
+                        <a href="">
+                            <span class="name black-text center">JOAQUIN CORTEZ</span>
+                        </a>
+                        <a href="">
+                            <span class="email black-text center">joakincortez8@gmail.com</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="material-icons">assignment_ind</i>
+                        Actividades
+                    </a>
+                </li>
+                <!-- <li>
+                            <div class="divider"></div>
+                        </li> -->
+                <li>
+                    <a href="reportes.html">
+                        <i class="material-icons">bar_chart</i>
+                        Reportes
+                    </a>
+                </li>
+                <li>
+                    <a href="configuracion.html">
+
+                        <i class="material-icons">settings_applications</i>
+                        Configuracion
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="col s9 ">
+            <br>
+            <!-- encabezado -->
+            <div class="row">
+                <div class="col s1 right">
+                    <!-- para la imagen -->
+                </div>
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Salir">
+                        power_settings_new
+                    </i>
+                </div>
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Buscar">
+                        search
+                    </i>
+                </div>
+
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Notificaciones">
+                        notification_important
+                    </i>
+                </div>
+                <div class="col s5 center black-text">
+                    <h6>CONFIGURACION</h6>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <br>
+            <br>
+            <!-- cuerpo -->
+            <div class="row">
+
+                <div class="col s6">
+                    <div class="input-field col s6">
+                        <a href="#idModal" class="btn-floating modal-trigger" id="agregar"><i
+                                class="material-icons">add</i></a>
+                        <a href="#idModal" class="btn-floating modal-trigger" id="agregar"><i
+                                class="material-icons">edit</i></a>
+                        <!-- <label for="">AGREGAR</label> -->
+                    </div>
+                    <div class="input-field col s6">
+                        <select id='rol'>
+                            <option value="" disabled selected>Seleccione el rol</option>
+                            <!-- <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option> -->
+                        </select>
+                        <label>Roles</label>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <table id="tblDatos">
+                        <thead>
+                            <tr>
+                                <th style="display:none;">id</th>
+                                <th>Nombres</th>
+                                <th>A.paterno</th>
+                                <th>A.materno</th>
+                                <th>Email</th>
+                                <th>Limitacion(MB)</th>
+                                <th>Usuario</th>
+                                <th>Password</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbody">
+                            <tr>
+                                <td colspan="8" style="text-align: center;">
+                                    <h6>No Hay Datos</h6>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Jellybean</td>
+                                <td>$3.76</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Lollipop</td>
+                                <td>$7.00</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- modal -->
+        <div id="idModal" class="modal">
+            <div class="modal-content">
+                <h4 class="modal-title">Acciones</h4>
+                <div class="row">
+                    <form class="col s12" id="form">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="nombres" type="text" class="validate">
+                                <label for="nombres">Nombres</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="apaterno" type="text" class="validate">
+                                <label for="apaterno">A.paterno</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="amaterno" type="text" class="validate">
+                                <label for="amaterno">A.materno</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="email" type="text" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <!-- <input id="limitacion" type="text" class="validate"> -->
+                                <p class="range-field">
+                                    <label for="limitacion">Limitacion</label>
+                                    <input type="range" id="limitacion" min="1" max="100" value="2"/>
+                                </p>
+                            </div>
+                            <div class="input-field col s6">
+                                <select id='rolModal'>
+                                    <option value="" disabled selected>Seleccione el rol</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn center" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn modal-close">Cerrar</a>
+            </div>
+        </div>
+
+        <!-- aqui termina -->
+
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="./js/conexion/conexion.js"></script>
+        <script src="./js/mod5/interface.js"></script>
+        <script src="./js/mod5/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="./js/init.js"></script>
+        <!-- <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('select');
+                var instances = M.FormSelect.init(elems);
+            });
+        </script> -->
+</body>
+
+</html>

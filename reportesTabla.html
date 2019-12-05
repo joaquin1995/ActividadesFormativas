@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animation.css"> -->
+    <link rel="stylesheet" href="./css/paginacion.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="row">
+        <div class="col s3">
+            <ul id="slide-out" class="sidenav sidenav-fixed">
+                <li>
+                    <div class="user-view">
+                        <!-- <div class="background">
+                            <img src="https://lorempixel.com/580/250/nature/1" alt="">
+                        </div> -->
+                        <a href="">
+                            <!-- <img src="./img/descarga.png" alt="" class="circle"> -->
+                            <span class="name black-text center">ACTIVIDADES</span>
+                        </a>
+                        <a href="">
+                            <span class="name black-text center">JOAQUIN CORTEZ</span>
+                        </a>
+                        <a href="">
+                            <span class="email black-text center">joakincortez8@gmail.com</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="material-icons" id="icon">assignment_ind</i> Actividades
+                    </a>
+                </li>
+                <!-- <li>
+                    <div class="divider"></div>
+                </li> -->
+                <li>
+                    <a href="reportes.html">
+                        <i class="material-icons" id="icon">bar_chart</i> Reportes
+                    </a>
+                </li>
+                <li>
+                    <a href="configuracion.html">
+
+                        <i class="material-icons" id="icon">settings_applications</i> Configuracion
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col s9 ">
+            <br>
+            <!-- encabezado -->
+            <div class="row">
+                <div class="col s1 right">
+                    <!-- para la imagen -->
+                </div>
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Salir">
+                        power_settings_new
+                    </i>
+                </div>
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Buscar">
+                        search
+                    </i>
+                </div>
+
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Notificaciones">
+                        notification_important
+                    </i>
+                </div>
+                <div class="col s5 center text">
+                    <h6>REPORTES</h6>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <br>
+            <br>
+            <!-- cuerpo -->
+            <div class="row">
+
+                <div class="col s12">
+
+                    <div class="input-field col s3">
+                        <select id="anio">
+                            <option value="%%" disabled selected>Fecha</option>
+
+                        </select>
+                        <label>Fecha</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <select id="modulo">
+                            <option value="%%" disabled selected>Modulo</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label>Modulo</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <select id="semestre">
+                            <option value="%%" disabled selected>Semestre</option>
+                            <option value="1">Semestre 1</option>
+                            <option value="2">Semestre 2</option>
+                        </select>
+                        <label>Semestre</label>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <select id="estado">
+                            <option value="%%" disabled selected>Estado</option>
+                            <option value="P">Pendiente</option>
+                            <option value="A">Aprobado</option>
+                        </select>
+                        <label>Estado</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <input type="text" id="carrera" class="autocomplete" autocomplete="off">
+                        <label for="carrea">Carrera</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <select id="actividad">
+                            <option value="%%" disabled selected>Actividad</option>
+                            <!-- <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option> -->
+                        </select>
+                        <label>Actividad</label>
+                    </div>
+
+                </div>
+
+
+                <!-- <div class="card-panel"> -->
+                <table id="tblDatos">
+                    <thead>
+                        <tr>
+                            <th style="display:none;">id</th>
+                            <th>Semestre</th>
+                            <th>Modulo</th>
+                            <th>Fechas</th>
+                            <th>Tipo de Actividad</th>
+                            <th style="display:none;">Descripcion</th>
+                            <th>Asignacion</th>
+                            <th>Carrera</th>
+                            <th>Docente</th>
+                            <th  style="display:none;">estado</th>
+                            <th>Archivo</th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbody">
+                        <tr>
+                            <td colspan="8" style="text-align: center;">
+                                <h6>No Hay Datos</h6>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                        </tr>
+                        <tr>
+                            <td>Alan</td>
+                            <td>Jellybean</td>
+                            <td>$3.76</td>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                        </tr>
+                        <tr>
+                            <td>Jonathan</td>
+                            <td>Lollipop</td>
+                            <td>$7.00</td>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <div class="divider"></div>
+                <!-- <hr> -->
+                <div class="col s3">
+                    <div id="paginador">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="idModal" class="modal">
+
+        <div class="modal-content center">
+
+            <h4 class="modal-title">ARCHIVOS</h4>
+            <h5 id="dsc"></h5>
+            <h5 id="est"></h5>
+            <div id="archivos">
+                
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <a href="#" class="btn modal-close">Cerrar</a>
+        </div>
+
+    </div>
+    <!-- fin -->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="./js/conexion/conexion.js"></script>
+    <script src="./js/mod2/paginacion.js"></script>
+    <script src="./js/mod2/intefaceR.js"></script>
+    <script src="./js/mod2/appR.js"></script>
+
+</body>
+
+</html>

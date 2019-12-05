@@ -11,209 +11,225 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/animation.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- <link rel="stylesheet" href="./css/animation.css"> -->
 
     <title>Document</title>
 </head>
 
 <body>
-    <div class="hero">
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="row">
-            <div class="col s3">
-                <ul id="slide-out" class="sidenav sidenav-fixed">
-                    <li>
-                        <div class="user-view">
-                            <!-- <div class="background">
-                            <img src="https://lorempixel.com/580/250/nature/1" alt="">
-                        </div> -->
-                            <a href="">
-                                <!-- <img src="./img/descarga.png" alt="" class="circle"> -->
-                                <span class="name white-text center">ACTIVIDADES</span>
-                            </a>
-                            <a href="">
-                                <span class="name white-text center">JOAQUIN CORTEZ</span>
-                            </a>
-                            <a href="">
-                                <span class="email white-text center">joakincortez8@gmail.com</span>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                    <li>
-                        <a href="index2.html" id="opcion">
-                            <i class="material-icons">assignment_ind</i> Actividades
+
+    <div class="row">
+        <div class="col s3">
+            <ul id="slide-out" class="sidenav sidenav-fixed">
+                <li>
+                    <div class="user-view">
+                        <!-- <div class="background">
+                                    <img src="https://lorempixel.com/580/250/nature/1" alt="">
+                                </div> -->
+                        <a href="">
+                            <!-- <img src="./img/descarga.png" alt="" class="circle"> -->
+                            <span class="name black-text center">ACTIVIDADES</span>
                         </a>
-                    </li>
-                    <!-- <li>
+                        <a href="">
+                            <span class="name black-text center">JOAQUIN CORTEZ</span>
+                        </a>
+                        <a href="">
+                            <span class="email black-text center">joakincortez8@gmail.com</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
                     <div class="divider"></div>
-                </li> -->
-                    <li>
-                        <a href="reportes.html" id="opcion">
-                            <i class="material-icons">bar_chart</i> Reportes
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" id="opcion">
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="material-icons">assignment_ind</i>
+                        Actividades
+                    </a>
+                </li>
+                <!-- <li>
+                            <div class="divider"></div>
+                        </li> -->
+                <li>
+                    <a href="reportes.html">
+                        <i class="material-icons">bar_chart</i>
+                        Reportes
+                    </a>
+                </li>
+                <li>
+                    <a href="configuracion.html">
 
-                            <i class="material-icons">settings_applications</i> Configuracion
-                        </a>
-                    </li>
-                </ul>
+                        <i class="material-icons">settings_applications</i>
+                        Configuracion
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="col s9 ">
+            <br>
+            <!-- encabezado -->
+            <div class="row">
+                <div class="col s1 right">
+                    <!-- para la imagen -->
+                </div>
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Salir">
+                        power_settings_new
+                    </i>
+                </div>
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Buscar">
+                        search
+                    </i>
+                </div>
+
+                <div class="col s1 right">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Notificaciones">
+                        notification_important
+                    </i>
+                </div>
+                <div class="col s5 center black-text">
+                    <h6>ACTIVIDADES INFORMATIVAS</h6>
+                </div>
             </div>
 
+            <div class="divider"></div>
+            <br>
+            <br>
+            <!-- cuerpo -->
+            <div class="row">
 
-
-            <div class="col s9 ">
-                <br>
-                <!-- encabezado -->
-                <div class="row">
-                    <div class="col s1 right">
-                        <!-- para la imagen -->
-                    </div>
-                    <div class="col s1 right">
-                        <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Salir">
-                            power_settings_new
-                        </i>
-                    </div>
-                    <div class="col s1 right">
-                        <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Buscar">
-                            search
-                        </i>
-                    </div>
-
-                    <div class="col s1 right">
-                        <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Notificaciones">
-                            notification_important
-                        </i>
-                    </div>
-                    <div class="col s5 center white-text">
-                        <h6>ACTIVIDADES INFORMATIVAS</h6>
+                <div class="center section" id="circulo" style="display: none;">
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="divider"></div>
-                <br>
-                <br>
-                <!-- cuerpo -->
-                <div class="row">
-                    <form class="col s12" autocomplete="off">
-
-                        <div class="row card-panel">
-                            <div class="input-field col s6">
-                                <select>
-                                    <option value="" disabled selected>Semestre</option>
-                                    <option value="1">Semestre 1</option>
-                                    <option value="2">Semestre 2</option>
-                                </select>
-                                <label>Semestre</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <select>
-                                    <option value="" disabled selected>Modulo</option>
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-
-                                </select>
-                                <label>Modulo</label>
-                            </div>
-
-                            <div class="input-field col s6">
-                                <input type="text" class="datepicker">
-                                <label>Fecha</label>
-                            </div>
-
-                            <div class="input-field col s6">
-                                <input type="text" id="carrera" class="autocomplete">
-                                <label for="carrea">Carrera</label>
-                            </div>
 
 
-                            <div class="input-field col s6">
-                                <input type="text" id="materia" class="autocomplete1">
-                                <label for="materia">Asignatura</label>
+                <form class="col s12" autocomplete="off" id="form">
+                    <div class="row card-panel">
+                        <div class="input-field col s6">
+                            <select id="semestre">
+                                <option value="" disabled selected>Semestre</option>
+                                <option value="1">Semestre 1</option>
+                                <option value="2">Semestre 2</option>
+                            </select>
+                            <label>Semestre</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <select id="modulo">
+                                <option value="" disabled selected>Modulo</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
 
-                            </div>
-                            <div class="input-field col s6">
+                            </select>
+                            <label>Modulo</label>
+                        </div>
 
-                                <select id="actividad">
-                                    <!-- <option value="" disabled selected>Tipo de Actividad</option> -->
-                                    <!-- <option value="0">Actividad 0</option>
-                                    <option value="1">Actividad 1</option>
-                                    <option value="2">Actividad 2</option>
-                                    <option value="3">Actividad 3</option>
-                                    <option value="4">Actividad 4</option>
-                                    <option value="5">Actividad 5</option> -->
+                        <div class="input-field col s6">
+                            <input type="text" class="datepicker" id="fecha">
+                            <label>Fecha</label>
+                        </div>
 
-                                </select>
-                                <label>Actividad</label>
-
-                            </div>
-
-                            <div class="input-field col s6">
-
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                <label for="textarea1">Descripcion de la Actividad</label>
-
-                            </div>
+                        <div class="input-field col s6">
+                            <input type="text" id="carrera" class="autocomplete">
+                            <label for="carrea">Carrera</label>
+                        </div>
 
 
-                            <div class="input-field col s6">
-                                <button class="btn modal-trigger grey darken-4" data-target="idModal">Archivos</button>
-                            </div>
+                        <div class="input-field col s6">
+                            <input type="text" id="materia" class="autocomplete1">
+                            <label for="materia">Asignatura</label>
 
-                            <div class="input-field col s12 center">
-                                <button class="btn grey darken-4" type="submit">Enviar</button>
-                            </div>
+                        </div>
+                        <div class="input-field col s6">
+
+                            <select id="actividad">
+
+
+                            </select>
+                            <label>Actividad</label>
 
                         </div>
 
-                    </form>
+                        <div class="input-field col s6">
 
-                </div>
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Descripcion de la Actividad</label>
 
+                        </div>
+
+
+                        <div class="input-field col s6">
+                            <button class="btn modal-trigger grey darken-4" data-target="idModal">Archivos</button>
+                        </div>
+
+                        <div class="input-field col s12 center">
+                            <button class="btn grey darken-4" type="submit">Enviar</button>
+                        </div>
+
+                    </div>
+
+                </form>
 
             </div>
+
+
         </div>
     </div>
+
 
     <!-- modal -->
     <div id="idModal" class="modal">
 
         <div class="modal-content">
 
-            <h4 class="modal-title">Archivos</h4>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione explicabo rerum minima saepe
-                    perferendis maiores, quo modi a, porro deserunt quibusdam consequatur alias sed quidem eius eligendi
-                    eveniet nesciunt est?</p> -->
+            <h4 class="modal-title center">Archivos</h4>
+            <p class="center">Usted esta Limitado a 2.0 MB, su formulario no sera enviado
+                al servidor si sobre pasa el limite.
+            </p>
 
-            <form action="#">
-                <div class="file-field input-field">
-                    <div class="btn">
-                        <span>File</span>
-                        <input type="file">
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text">
-                    </div>
+            <!-- <form action=""> -->
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>File</span>
+                    <!-- <input type="file"> -->
+                    <input type="file" id="collection" onchange="archivos(this)" multiple /><br />
+
+
+                    <!-- <button id="guardar">Guardar</button> -->
                 </div>
-            </form>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+
+            <ul id="archivos"></ul>
+            <h4 id='total' class="center"></h4>
+            <!-- </form> -->
         </div>
 
         <div class="modal-footer">
-            <a href="" class="btn modal-close">Cerrar</a>
+            <a href="#" class="btn modal-close">Cerrar</a>
         </div>
 
     </div>
@@ -223,6 +239,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="./js/conexion/conexion.js"></script>
     <script src="./js/mod1/interfaceA.js"></script>
+    <script src="./js/mod1/archivos.js"></script>
     <script src="./js/mod1/appA.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/init.js"></script>

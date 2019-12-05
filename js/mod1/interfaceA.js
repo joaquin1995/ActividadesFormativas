@@ -2,12 +2,13 @@ class InterfaceA {
 
     constructor() {
 
-        
+        this.init();
     }
 
-    init(){
+    init() {
         this.tipoActividad();
         this.obtenerCarrera();
+        this.obtenerMaterias();
     }
 
 
@@ -29,33 +30,6 @@ class InterfaceA {
                     actividad.innerHTML = option;
                     console.log(option);
                     M.FormSelect.init(elems);
-
-                    // var a = ["a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n"];
-
-                    // // Recibe un array y el elemento a Buscar. Devolverá el arreglo  si en caso
-                    // function binarySearch(array, item) {
-                    //     debugger
-                    //     var low = 0;
-                    //     var high = array.length - 1;
-
-                    //     while (low <= high) {
-                    //         var middle = Math.floor((low + high) / 2);
-                    //         var guess = array[middle];
-                    //         if (guess == item) {
-                    //             return middle;
-                    //         }
-                    //         if (guess > item) {
-                    //             high = middle - 1;
-                    //         } else {
-                    //             low = middle + 1;
-                    //         }
-                    //     }
-                    //     return -1;
-                    // }
-
-                    // binarySearch(a, "c");
-
-
 
                 } else {
                     console.log('no hay datos');
@@ -83,11 +57,9 @@ class InterfaceA {
                     });
                     console.log(formato);
                     let data = {};
-
                     for (let i = 0; i < formato.length; i++) {
                         data[formato[i]] = null;
                     }
-
                     let options = {
                         data,
                         onAutocomplete: (text) => {
@@ -95,6 +67,7 @@ class InterfaceA {
                             const valor = this.busquedaBinaria(text, arrayCarreras);
                             console.log(valor);
                             console.log(arrayCarreras[valor]);
+                            carrera = arrayCarreras[valor];
                         },
                         minLength: 3
                     };
@@ -111,16 +84,52 @@ class InterfaceA {
             });
     }
 
-    obtenerMaterias(){
+    obtenerMaterias() {
+        let formato;
         let url = cnx.getUrl();
         url += 'materia';
         cnx.get(url)
-        .then(res => {
-            console.log(res);
-        })
-        .catch(err => {
-            console.log(err);
-        })
+            .then(res => {
+                console.log(res);
+                const datos = res.materia;
+                if (datos.length > 0) {
+                    console.log(datos);
+                    arrayMaterias = datos;
+                    formato = datos.map(x => {
+                        //nombre: "ACTOS ADMINISTRATIVOS Y ACTOS PDABLICOS"
+                        // siglas: "ACS-114"
+                        return (`${x.id} ${x.siglas} ${x.nombre}`);
+                    });
+                    console.log(formato);
+                    let data = {};
+                    for (let i = 0; i < formato.length; i++) {
+                        data[formato[i]] = null;
+                    }
+                    let options = {
+                        data,
+                        onAutocomplete: (text) => {
+                            console.log(text);
+                            const id = text.split(' ')[0];
+                            console.log(id);
+                            const valor = this.busquedaBinariaId(arrayMaterias, Number(id));
+                            console.log(arrayMaterias[valor]);
+                            materia = arrayMaterias[valor];
+                            // const valor = this.busquedaBinaria(text, arrayCarreras);
+                            // console.log(valor);
+
+                        },
+                        minLength: 3
+                    };
+
+                    var elems = document.querySelectorAll('.autocomplete1');
+                    M.Autocomplete.init(elems, options);
+                } else {
+                    console.log('no hay datos');
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     busquedaBinaria(item, array) {
@@ -186,4 +195,56 @@ class InterfaceA {
         }
         return -1;
     }
+
+    busquedaBinariaId(array, id) {
+        let menor = 0;
+        let mayor = array.length - 1;
+        // debugger
+        while (menor <= mayor) {
+            let medio = Math.floor((menor + mayor) / 2);
+            let encontrar = array[medio];
+
+            if (encontrar.id === id) {
+                return medio;
+            }
+            if (encontrar.id > id) {
+                mayor = medio - 1;
+            } else {
+                menor = medio + 1;
+            }
+        }
+        return -1;
+
+    }
+
+    guardarActividad(json) {
+        let url = cnx.getUrl();
+        url += 'actividad';
+        cnx.post(json, url)
+            .then(async res => {
+                let urlFile = cnx.getUrl();
+                urlFile += 'archivo-act';
+                console.log(res);
+                const id = res.actividad.id;
+                console.log(id);
+                if (nuevaLista.length > 0) {
+                    for (let i = 0; i < nuevaLista.length; i++) {
+                        const x = await nuevaLista[i];
+                        let formData = new FormData();
+                        formData.append('idact', id);
+                        formData.append('file', x);
+                        await cnx.postFile(formData, urlFile);
+                    }
+                    circulo.style.display = 'none';
+                    formulario.style.display = 'block';
+                    M.toast({html: 'Completado'});
+                    formulario.reset();
+                }
+            })
+            .catch(err => {
+                console.log(err);
+
+            })
+    }
+
 }

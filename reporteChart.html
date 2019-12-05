@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
     <!-- <link rel="stylesheet" href="./css/animation.css"> -->
@@ -93,7 +94,7 @@
                     </i>
                 </div>
                 <div class="col s5 center black-text">
-                    <h6>REPORTES</h6>
+                    <h6>RERPORTE GRAFICO DE CARRERAS</h6>
                 </div>
             </div>
 
@@ -102,49 +103,54 @@
             <br>
             <!-- cuerpo -->
             <div class="row">
-                <!-- primer cards -->
-                <div class="col s4" onclick="location.href='reportesTabla.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/reporte.jpg" alt="">
-                            <span class="card-title black-text">Reporte Archivos</span>
-                        </div>
-                    </div>
+                <div class="input-field col s4">
+                    <select id="anio">
+                        <option value="" disabled selected>Año</option>
+                    </select>
+                    <label>Año</label>
                 </div>
-                <!-- aqui termina -->
-                <!-- sgundo cards -->
-                <div class="col s4" onclick="location.href='reporteChart.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/char.png" alt="">
-                            <span class="card-title black-text">Reporte Grafico Por Carreras</span>
-                        </div>
-                    </div>
+                <div class="input-field col s4">
+                    <select id="cantidad">
+                        <option value="" disabled selected>Cantidad</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                    </select>
+                    <label>Cantidad</label>
                 </div>
-                <!-- aqui termina -->
-                <!-- tercer cards -->
-                <div class="col s4" onclick="location.href='reporteChartFac.html'">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./img/char.png" alt="">
-                            <span class="card-title black-text">Reporte Grafio Por Facultad</span>
-                        </div>
+                <div class="input-field col s4">
+                        <select id="tipo">
+                            <option value="" disabled selected>Tipo De Actividad</option>
+                            <option value="%%">GENERAL</option>
+                        </select>
+                        <label>Tipo De Actividad</label>
                     </div>
-                </div>
-                <!-- aqui termina -->
+                <h4 class="center" id="texto">NO HAY DATOS</h4>
+                <canvas id="bar-chart" width="800" height="450"></canvas>
+                
+
             </div>
+
+
         </div>
     </div>
 
 
 
-    <!-- Compiled and minified JavaScript -->
 
+    <!-- Compiled and minified JavaScript -->
+    <script src="char.js"></script>
+    <script src="./js/conexion/conexion.js"></script>
+    <script src="./js/mod3/intefaceC.js"></script>
+    <script src="./js/mod3/appC.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/init.js"></script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+        });
+    </script> -->
 </body>
 
 </html>
-
-
-
