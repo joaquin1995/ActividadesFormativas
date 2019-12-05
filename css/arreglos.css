@@ -91,4 +91,17 @@ a:hover {
     box-shadow: none;
 }
 
+.card-title {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600 !important;
+}
+
+.img-degradada {
+    opacity: 0.5 !important;
+}
 
