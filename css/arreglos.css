@@ -88,7 +88,7 @@ a:hover {
 .card:hover {
     left: 0px;
     top: 0px;
-    box-shadow: none;
+    box-shadow: 0 4px 8px 0 black;
 }
 
 .card-title {
