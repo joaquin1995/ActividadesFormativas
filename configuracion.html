@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <link rel="stylesheet" href="./css/tabla.css">
+    <link rel="stylesheet" href="./css/arreglos.css">
 
     <title>Document</title>
 </head>
@@ -22,19 +23,19 @@
         <div class="col s3">
             <ul id="slide-out" class="sidenav sidenav-fixed">
                 <li>
-                    <div class="user-view">
+                    <div class="user-view ">
                         <!-- <div class="background">
-                                    <img src="https://lorempixel.com/580/250/nature/1" alt="">
-                                </div> -->
+                                            <img src="https://lorempixel.com/580/250/nature/1" alt="">
+                                        </div> -->
                         <a href="">
-                            <!-- <img src="./img/descarga.png" alt="" class="circle"> -->
-                            <span class="name black-text center">ACTIVIDADES</span>
+                            <img src="./img/user.png" alt="" class="circle ">
+                            <span class="name white-text center">ACTIVIDADES</span>
                         </a>
                         <a href="">
-                            <span class="name black-text center">JOAQUIN CORTEZ</span>
+                            <span class="name white-text center">JOAQUIN CORTEZ</span>
                         </a>
                         <a href="">
-                            <span class="email black-text center">joakincortez8@gmail.com</span>
+                            <span class="email white-text center">joakincortez8@gmail.com</span>
                         </a>
                     </div>
                 </li>
@@ -42,22 +43,22 @@
                     <div class="divider"></div>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="index.html" class="texto-sidevar">
                         <i class="material-icons">assignment_ind</i>
                         Actividades
                     </a>
                 </li>
                 <!-- <li>
-                            <div class="divider"></div>
-                        </li> -->
+                                    <div class="divider"></div>
+                                </li> -->
                 <li>
-                    <a href="reportes.html">
+                    <a href="reportes.html" class="texto-sidevar">
                         <i class="material-icons">bar_chart</i>
                         Reportes
                     </a>
                 </li>
                 <li>
-                    <a href="configuracion.html">
+                    <a href="configuracion.html" class="texto-sidevar active">
 
                         <i class="material-icons">settings_applications</i>
                         Configuracion
@@ -67,31 +68,31 @@
         </div>
 
 
-
-        <div class="col s9 ">
+        <div class="col s9">
             <br>
             <!-- encabezado -->
-            <div class="row">
-                <div class="col s1 right">
+            <div class="row nadvar">
+                <div class="col s1 right iconos-nadvar">
                     <!-- para la imagen -->
                 </div>
-                <div class="col s1 right">
+                <div class="col s1 right iconos-nadvar">
                     <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Salir">
                         power_settings_new
                     </i>
                 </div>
-                <div class="col s1 right">
+                <div class="col s1 right iconos-nadvar">
                     <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Buscar">
                         search
                     </i>
                 </div>
 
-                <div class="col s1 right">
+                <div class="col s1 right iconos-nadvar">
                     <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Notificaciones">
                         notification_important
                     </i>
                 </div>
-                <div class="col s5 center black-text">
+                <div class="col s8 center black-text flex-nadvar">
+                    <img class="img-icon" src="./img/utepsa.png" alt="" srcset="">
                     <h6>CONFIGURACION</h6>
                 </div>
             </div>
@@ -212,7 +213,7 @@
                                 <!-- <input id="limitacion" type="text" class="validate"> -->
                                 <p class="range-field">
                                     <label for="limitacion">Limitacion</label>
-                                    <input type="range" id="limitacion" min="1" max="100" value="2"/>
+                                    <input type="range" id="limitacion" min="1" max="100" value="2" />
                                 </p>
                             </div>
                             <div class="input-field col s6">
