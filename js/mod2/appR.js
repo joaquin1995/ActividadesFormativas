@@ -98,6 +98,6 @@ function fila(e) {
 
  excel.addEventListener('click',()=> {
       console.log('si');
-      exportTableToExcel('tblDatos','prueba');
- })
+      exportTableToExcel('tblDatos','Reporte');
+ });
 

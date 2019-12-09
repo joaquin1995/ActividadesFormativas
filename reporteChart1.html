@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="./css/arreglos.css">
+
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- <link rel="stylesheet" href="./css/animation.css"> -->
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col s3">
+            <ul id="slide-out" class="sidenav sidenav-fixed">
+                <li>
+                    <div class="user-view ">
+                        <!-- <div class="background">
+                                                    <img src="https://lorempixel.com/580/250/nature/1" alt="">
+                                                </div> -->
+                        <a href="">
+                            <img src="./img/user.png" alt="" class="circle ">
+                            <span class="name white-text center">ACTIVIDADES</span>
+                        </a>
+                        <a href="">
+                            <span class="name white-text center">JOAQUIN CORTEZ</span>
+                        </a>
+                        <a href="">
+                            <span class="email white-text center">joakincortez8@gmail.com</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <a href="index.html" class="texto-sidevar">
+                        <i class="material-icons">assignment_ind</i>
+                        Actividades
+                    </a>
+                </li>
+                <!-- <li>
+                                            <div class="divider"></div>
+                                        </li> -->
+                <li>
+                    <a href="reportes.html" class="texto-sidevar active">
+                        <i class="material-icons">bar_chart</i>
+                        Reportes
+                    </a>
+                </li>
+                <li>
+                    <a href="configuracion.html" class="texto-sidevar ">
+
+                        <i class="material-icons">settings_applications</i>
+                        Configuracion
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col s9">
+            <br>
+            <!-- encabezado -->
+            <div class="row nadvar">
+                <div class="col s1 right iconos-nadvar">
+                    <!-- para la imagen -->
+                </div>
+                <div class="col s1 right iconos-nadvar">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Salir">
+                        power_settings_new
+                    </i>
+                </div>
+                <div class="col s1 right iconos-nadvar">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Buscar">
+                        search
+                    </i>
+                </div>
+
+                <div class="col s1 right iconos-nadvar">
+                    <i class="material-icons tooltipped right" data-position="bottom" data-tooltip="Notificaciones">
+                        notification_important
+                    </i>
+                </div>
+                <div class="col s6 center black-text flex-nadvar">
+                    <img class="img-icon" src="./img/utepsa.png" alt="" srcset="">
+                    <h6>REPORTE GRAFICO POR CARRERAS</h6>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <br>
+            <br>
+            <!-- cuerpo -->
+            <div class="row">
+                <div class="input-field col s4">
+                    <select id="anio">
+                        <option value="" disabled selected>Año</option>
+                    </select>
+                    <label>Año</label>
+                </div>
+                <div class="input-field col s4">
+                    <select id="cantidad">
+                        <option value="" disabled selected>Cantidad</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                    </select>
+                    <label>Cantidad</label>
+                </div>
+                <div class="input-field col s4">
+                    <select id="tipo">
+                        <option value="" disabled selected>Tipo De Actividad</option>
+                        <option value="%%">GENERAL</option>
+                    </select>
+                    <label>Tipo De Actividad</label>
+                </div>
+                <div class="input-field col s4">
+                    <select id="anio">
+                        <option value="" disabled selected>Semestre</option>
+                        <option value="15">15</option>
+                    </select>
+                    <label>Semestre</label>
+                </div>
+                <div class="input-field col s4">
+                    <select id="cantidad">
+                        <option value="" disabled selected>Cantidad</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                    </select>
+                    <label>Cantidad</label>
+                </div>
+                <div class="input-field col s4">
+                    <select id="cantidad">
+                        <option value="" disabled selected>Cantidad</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                    </select>
+                    <label>Cantidad</label>
+                </div>
+                <h4 class="center" id="texto">NO HAY DATOS</h4>
+                <canvas id="bar-chart" width="800" height="450"></canvas>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="char.js"></script>
+    <script src="./js/conexion/conexion.js"></script>
+    <script src="./js/mod3/intefaceC.js"></script>
+    <script src="./js/mod3/appC.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/init.js"></script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+        });
+    </script> -->
+</body>
+
+</html>
