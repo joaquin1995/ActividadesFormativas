@@ -87,7 +87,7 @@ class Conexion {
 
 
     getUrl() {
-        return `http://10.42.0.84:8010/api/`;
+        return `http://10.42.0.1:8010/api/`;
     }
     // http://172.27.9.14:9001/api/
     // 190.186.43.205:8080
