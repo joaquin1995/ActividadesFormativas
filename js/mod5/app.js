@@ -111,20 +111,20 @@ form.addEventListener('submit', (e) => {
         case 0:
             insertar();
             console.log('insertar');
-            
+
             break;
         case 1:
             actualizar();
             console.log('actualizar');
-            
+
             break;
         default:
             break;
     }
-    
+
 });
 
-const insertar = ()=>{
+const insertar = () => {
     const valor = validacion();
     console.log(valor);
     if (valor) {
@@ -144,12 +144,44 @@ const insertar = ()=>{
     }
 }
 
-const actualizar = ()=> {
-  
+const actualizar = () => {
+    let json = {};
+    json.nombres = form.nombres.value;
+    json.apat = form.apaterno.value;
+    json.amat = form.amaterno.value;
+    json.email = form.email.value;
+    json.limitacion = form.limitacion.value;
+    json.idrol = rolModal.value;
+    let url = cnx.getUrl();
+    url += `persona/${id}`;
+    cnx.put(json, url)
+        .then(res => {
+            console.log(res);
+            let url = cnx.getUrl();
+            url += `cuenta/${id}`;
+            let json = {};
+            json.usuario = form.uss.value;
+            json.password = form.pass.value;
+            cnx.put(json, url)
+                .then(res => {
+                    console.log(res);
+                    M.toast({
+                        html: 'Actualizado Correctamente!'
+                    });
+                    form.reset();
+                    io.getPerson(rol.value);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
 
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }
 
-const llenarCampos = () =>{
+const llenarCampos = () => {
     form.nombres.value = nom;
     form.apaterno.value = ap;
     form.amaterno.value = am;
