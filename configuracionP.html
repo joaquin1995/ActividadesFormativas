@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--Import Google Icon Font-->
+    <script src="./js/redireccionar.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -228,6 +229,10 @@
                 var instances = M.FormSelect.init(elems);
             });
         </script> -->
+        <script>
+            const user = JSON.parse(localStorage.getItem('user'));
+            (user.rol.toUpperCase() != 'ADMINISTRADOR') ? location.href = './index.html' : console.log('Bye')
+        </script>
 </body>
 
 </html>

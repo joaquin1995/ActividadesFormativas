@@ -1,9 +1,11 @@
 button {
     transition: 300ms all !important;
+    background-color:rgba(223, 52, 52, 1) !important;
+
 }
 
 button:hover {
-    background-color:rgba(243, 28, 28, 0.8) !important;
+    background-color:rgb(255, 0, 0) !important;
 }
 
 .hero {

@@ -15,6 +15,7 @@ let operacion = 0;
 // funciones 
 
 
+
 rol.addEventListener('change', () => {
     const valor = rol.value;
     console.log(valor);
