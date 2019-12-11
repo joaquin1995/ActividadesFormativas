@@ -31,14 +31,15 @@ function cargarEventListeners() {
 }
 
 function mostrarUsuario()  {
-    const user = JSON.parse(localStorage.getItem('user'));
-    let slide = document.querySelector('.user-view');
-    let nombre = slide.children[0].children[1];
-    nombre.textContent = user.usuario
-    let rol = slide.children[1].children[0];
-    rol.textContent = user.rol.toUpperCase();
-    let correo = slide.children[2].children[0];
-    correo.textContent = user.email;
+        const user = JSON.parse(localStorage.getItem('user'));
+        let slide = document.querySelector('.user-view');
+        let nombre = slide.children[0].children[1];
+        nombre.textContent = user.usuario
+        let rol = slide.children[1].children[0];
+        rol.textContent = user.rol.toUpperCase();
+        let correo = slide.children[2].children[0];
+        correo.textContent = user.email;
+
 }
 
     // var options1 = {

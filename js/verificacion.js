@@ -10,6 +10,8 @@ function cargarEventListeners() {
     document.addEventListener('DOMContentLoaded', cargarStorage);
 
     loginBtn.addEventListener('click', enviarDatos);
+
+    document.addEventListener('keydown', teclado);
 }
 
 //Funciones
@@ -36,8 +38,7 @@ function enviarDatos(e) {
             return JSON.parse(window.atob(base64));
         };
         localStorage.setItem('user', JSON.stringify(datosToken))
-        localStorage.setItem('registro',datosToken.registro);
-        localStorage.setItem('rol',datosToken.idrol);
+        localStorage.setItem('rol',datosToken.rol);
 
     })
     .then(() => {
@@ -59,8 +60,15 @@ function enviarDatos(e) {
 }
 
 
+
+
 function cargarStorage() {
     const user = JSON.parse(localStorage.getItem('user'));
     (user) ? location.href = './index.html' :console.log('Sin Usuario'); 
 }
 
+function teclado(e) {
+    if(e.key == 'Enter') {
+        enviarDatos(e)
+    }
+  }
