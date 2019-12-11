@@ -109,8 +109,7 @@
                     <div class="input-field col s6">
                         <a href="#idModal" class="btn-floating modal-trigger" id="agregar"><i
                                 class="material-icons">add</i></a>
-                        <a href="#idModal" class="btn-floating modal-trigger" id="agregar"><i
-                                class="material-icons">edit</i></a>
+                        <a href="#" class="btn-floating" id="editar"><i class="material-icons">edit</i></a>
                         <!-- <label for="">AGREGAR</label> -->
                     </div>
                     <div class="input-field col s6">
@@ -144,39 +143,7 @@
                                     <h6>No Hay Datos</h6>
                                 </td>
                             </tr>
-                            <!-- <tr>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                            </tr>
-                            <tr>
-                                <td>Alan</td>
-                                <td>Jellybean</td>
-                                <td>$3.76</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                            </tr>
-                            <tr>
-                                <td>Jonathan</td>
-                                <td>Lollipop</td>
-                                <td>$7.00</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                            </tr> -->
+
                         </tbody>
                     </table>
                 </div>
@@ -225,6 +192,16 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="row" id="cuenta" style="display: none;">
+                            <div class="input-field col s6">
+                                <input id="uss" type="text" class="validate">
+                                <label for="uss">Usuario</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="pass" type="text" class="validate">
+                                <label for="pass">Password</label>
+                            </div>
+                        </div>
                         <button class="btn center" type="submit">Enviar</button>
                     </form>
                 </div>
@@ -238,11 +215,13 @@
 
 
         <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="./js/conexion/conexion.js"></script>
         <script src="./js/mod5/interface.js"></script>
-        <script src="./js/mod5/app.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
         <script src="./js/init.js"></script>
+        <script src="./js/mod5/app.js"></script>
+
         <!-- <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var elems = document.querySelectorAll('select');
