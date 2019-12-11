@@ -13,6 +13,7 @@ const form = document.querySelector('#form');
 // funciones 
 
 
+
 rol.addEventListener('change', () => {
     const valor = rol.value;
     console.log(valor);

@@ -164,8 +164,9 @@
 
                 </div>
 
-                <div class="col s12" >
-                    <a class="btn modal-trigger grey darken-4" id="excel"><i class="material-icons left">report</i>Generar Excel</a>
+                <div class="col s12">
+                    <a class="btn modal-trigger grey darken-4" id="excel"><i
+                            class="material-icons left">report</i>Generar Excel</a>
                 </div>
 
 
@@ -271,6 +272,11 @@
     <script src="./js/mod2/generarExcel.js"></script>
     <script src="./js/mod2/intefaceR.js"></script>
     <script src="./js/mod2/appR.js"></script>
+    <script src="./js/conexion/ocultar.js"></script>
+    <script>
+        const user = JSON.parse(localStorage.getItem('user'));
+        (user.rol.toUpperCase() == 'DOCENTE') ? location.href = './index.html' : console.log('Bye')
+    </script>
 </body>
 
 </html>

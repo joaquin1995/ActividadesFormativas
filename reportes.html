@@ -146,6 +146,27 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/init.js"></script>
+
+    <script>
+        cargarEventListeners()
+
+        function cargarEventListeners() {
+            document.addEventListener('DOMContentLoaded', () => {
+                const user = JSON.parse(localStorage.getItem('user'));
+                if (user.rol.toUpperCase() != 'ADMINISTRADOR') {
+                    let slide = document.querySelector('#slide-out').children[4]
+                    document.querySelector('#slide-out').removeChild(slide)
+                    let reportFacultad = document.querySelectorAll('.row')[2].children[2]
+                    document.querySelectorAll('.row')[2].removeChild(reportFacultad);
+                }
+
+            })
+        }
+    </script>
+    <script>
+        const user = JSON.parse(localStorage.getItem('user'));
+        (user.rol.toUpperCase() == 'DOCENTE') ? location.href = './index.html' : console.log('Bye')
+    </script>
 </body>
 
 </html>

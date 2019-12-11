@@ -60,7 +60,7 @@ function enviarDatos(e) {
 
 
 function cargarStorage() {
-    let user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem('user'));
     (user) ? location.href = './index.html' :console.log('Sin Usuario'); 
 }
 
